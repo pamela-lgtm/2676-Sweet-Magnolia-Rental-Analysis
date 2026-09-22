@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rental Analysis — 2676 Sweet Magnolia Place | Verandah Properties</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#008C82;--teal-deep:#00625B;--gold:#C9A227;--charcoal:#1A1A1A;
+--body:#1F1F1F;--muted:#5A5651;--strong:#0F0F0F;--line:#E2DED7;--paper:#FBFAF7;--panel:#F3F1EC;
+--red:#B5543C;--rose:#D4886F;--green:#4E8C6A;--slate:#6B7C8C}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body);font-family:'Jost',system-ui,sans-serif;font-weight:400;font-size:16.5px;line-height:1.68}
+.wrap{max-width:900px;margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--charcoal)}
+h1{font-size:2.5rem;line-height:1.1;margin:0 0 .4rem}
+h2{font-size:1.8rem;line-height:1.2;margin:0 0 .8rem}
+h3{font-size:1.18rem;margin:1.4rem 0 .45rem}
+p{margin:0 0 1rem;max-width:74ch}
+b,strong{font-weight:600;color:var(--strong)}
+ul{margin:0 0 1rem;padding-left:1.2rem;max-width:74ch}
+li{margin-bottom:.5rem}
+.mast{background:var(--charcoal);color:#F5F3EE;padding:28px 0 30px}
+.brandline{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
+.mark{width:33px;height:33px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Cormorant Garamond',serif;font-size:21px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;transform:translateY(5px)}
+.brandname{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#F5F3EE}
+.mast .tag{color:#A9A49C;font-size:.83rem;margin-left:auto;text-align:right;line-height:1.5}
+.kicker{color:var(--gold);font-size:.9rem;margin:22px 0 4px}
+.mast h1{color:#FBFAF7;margin-top:4px}
+.mast .sub{color:#B8B2A8;margin:0;font-size:1rem}
+.rec{background:var(--teal);color:#fff;padding:32px 0 30px}
+.rec h2{color:#fff;font-size:1.5rem;margin-bottom:.3rem}
+.rec .lead{color:#D6EDEA;max-width:70ch;margin-bottom:24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.28);border-radius:10px;overflow:hidden}
+.step{background:var(--teal);padding:20px}
+.step .k{font-size:.82rem;color:#CDE8E5;margin-bottom:6px}
+.step .v{font-family:'Cormorant Garamond',serif;font-size:2.4rem;line-height:1;color:#fff}
+.step .n{font-size:.87rem;color:#CDE8E5;margin-top:7px;line-height:1.45}
+.step:first-child{background:var(--teal-deep)}
+section{padding:38px 0;border-top:1px solid var(--line)}
+.snum{color:var(--teal-deep);font-size:.9rem;margin:0 0 .2rem}
+h2 em{font-style:italic;font-weight:400;color:var(--teal-deep)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;margin:0 0 20px}
+.fact{padding:14px 17px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact .k{font-size:.79rem;color:var(--muted);margin-bottom:2px}
+.fact .v{font-weight:600;color:var(--strong)}
+.confirm{color:#8A6D0B;background:#FBF3D8;padding:1px 7px;border-radius:4px;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 20px}
+.st{background:#fff;padding:18px}
+.st .v{font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1.05;color:var(--teal-deep)}
+.st .v.warn{color:var(--red)}
+.st .k{font-size:.85rem;color:var(--muted);margin-top:5px;line-height:1.45}
+.pull{border-left:4px solid var(--gold);background:#fff;padding:19px 24px;border-radius:0 8px 8px 0;margin:0 0 22px}
+.pull p:last-child{margin-bottom:0}
+.anchor{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:22px 26px;margin:0 0 22px}
+.anchor h3{margin-top:0;font-size:1.3rem}
+.anchor .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:14px 0 0}
+.anchor .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.anchor .row b{color:var(--teal-deep)}
+.box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:21px 24px;margin:0 0 20px}
+.box h3{margin-top:0}
+.box p:last-child{margin-bottom:0}
+details{border:1px solid var(--line);border-radius:9px;background:#fff;margin:0 0 14px}
+summary{cursor:pointer;padding:15px 19px;font-weight:600;color:var(--teal-deep);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.45rem;color:var(--gold);line-height:1;flex:0 0 auto}
+details[open] summary::after{content:"\2212"}
+summary:hover{background:var(--panel)}
+.dbody{padding:2px 19px 17px}
+.dbody > *:last-child{margin-bottom:0}
+.tscroll{overflow-x:auto;margin:0 0 14px}
+table{border-collapse:collapse;width:100%;font-size:.88rem;background:#fff;min-width:680px}
+th{background:var(--panel);color:var(--strong);font-weight:600;text-align:left;padding:10px 11px;border-bottom:2px solid var(--line);white-space:nowrap}
+td{padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.hi td{background:#E6F3F1;font-weight:600}
+tr.gold td{background:#FBF3D8}
+td.num,th.num{text-align:right;white-space:nowrap}
+caption{caption-side:bottom;text-align:left;color:var(--muted);font-size:.86rem;padding-top:9px}
+.pill{display:inline-block;font-size:.77rem;padding:2px 8px;border-radius:20px;font-weight:500}
+.fast{background:#DFF0EC;color:#00625B}.slow{background:#F6E3DE;color:#8A3B26}
+.chart{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px 26px;margin:0 0 22px}
+.chart h3{margin:0 0 4px}
+.chart .cap{font-size:.9rem;color:var(--muted);margin:0 0 18px}
+.bar{display:grid;grid-template-columns:190px 1fr;gap:13px;align-items:center;margin-bottom:11px;font-size:.9rem}
+.track{background:var(--panel);border-radius:4px;height:26px;overflow:hidden}
+.fill{height:26px;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#fff;font-weight:600;font-size:.85rem;white-space:nowrap}
+.fill.t{background:var(--teal)}.fill.g{background:var(--gold)}.fill.r{background:var(--red)}.fill.s{background:var(--slate)}.fill.gr{background:var(--green)}
+.src{font-size:.85rem;color:var(--muted);margin:14px 0 0;padding-top:13px;border-top:1px solid var(--line)}
+footer{background:var(--charcoal);color:#B8B2A8;padding:30px 0;font-size:.89rem}
+footer .sig{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);margin-bottom:8px}
+footer a{color:#8FD2CB}
+@media(max-width:720px){body{font-size:16px}h1{font-size:1.95rem}h2{font-size:1.45rem}.steps{grid-template-columns:1fr}.anchor .grid{grid-template-columns:1fr}.mast .tag{margin-left:0;width:100%;text-align:left}.bar{grid-template-columns:120px 1fr;font-size:.82rem}}
+@media print{body{background:#fff}section{page-break-inside:avoid}summary::after{content:""}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="brandline">
+      <span class="mark">V</span>
+      <span class="brandname">Verandah Properties, LLC</span>
+      <span class="tag">Rental Analysis<br>September 22, 2026</span>
+    </div>
+    <p class="kicker">Clayton Crossing · Oviedo</p>
+    <h1>2676 Sweet Magnolia Place</h1>
+    <p class="sub">Oviedo, FL 32765 · Townhome · 3 bed / 2.5 bath · 1,558 sq ft · 1-car garage · Built 2009</p>
+  </div>
+</header>
+
+<div class="rec">
+  <div class="wrap">
+    <h2>Our recommendation</h2>
+    <p class="lead">The goal is a signed lease within 21 days. Two other townhomes in Clayton Crossing are on the market right now — one the same size as yours — and both have been sitting for more than five weeks. To lease quickly, your home needs to be the obvious choice in its own community.</p>
+    <div class="steps">
+      <div class="step"><div class="k">Launch price</div><div class="v">$2,195</div><div class="n">Under the $2,200 search threshold, and below both Clayton Crossing listings.</div></div>
+      <div class="step"><div class="k">Day 5 checkpoint</div><div class="v">$2,125</div><div class="n">If showings aren't strong enough to let us choose a resident, we move by an amount renters notice.</div></div>
+      <div class="step"><div class="k">Next step</div><div class="v">$2,075</div><div class="n">A step, not a bottom. We keep reading the market and moving with it.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section style="border-top:none">
+  <p class="snum">Section One</p>
+  <h2>The property</h2>
+  <div class="facts">
+    <div class="fact"><div class="k">Configuration</div><div class="v">3 bed / 2.5 bath</div></div>
+    <div class="fact"><div class="k">Heated sq ft</div><div class="v">1,558</div></div>
+    <div class="fact"><div class="k">Garage</div><div class="v">1-car</div></div>
+    <div class="fact"><div class="k">Position</div><div class="v">Interior unit</div></div>
+    <div class="fact"><div class="k">Year built</div><div class="v">2009</div></div>
+    <div class="fact"><div class="k">Community</div><div class="v">Clayton Crossing — gated</div></div>
+  </div>
+  <p>Clayton Crossing is a small, gated townhome community in Oviedo with a community pool, zoned for Seminole County schools and close to the Cross Seminole Trail, SR-417 and UCF. It is a genuinely desirable address for renters.</p>
+  <p>We compared your home against every three-bedroom townhome rental in Clayton Crossing and neighboring Stratford Green — five listings, active and leased. Stratford Green homes all have two-car garages, and the Clayton Crossing listings include an end unit and a pond-view home, so we adjusted each one for those differences.</p>
+</section>
+
+<section>
+  <p class="snum">Section Two</p>
+  <h2>Your direct competition <em>is inside the gate</em></h2>
+  <p>Two other Clayton Crossing townhomes are for rent right now. A renter looking at your community will see all three.</p>
+
+  <div class="anchor">
+    <h3>5260 Hidden Cypress Lane — Clayton Crossing</h3>
+    <div class="grid">
+      <div>
+        <div class="row"><span>Heated sq ft</span><b>1,558 — same as yours</b></div>
+        <div class="row"><span>Garage</span><b>1-car</b></div>
+        <div class="row"><span>Position</span><b>End unit</b></div>
+        <div class="row"><span>Finishes</span><b>Quartz counters</b></div>
+      </div>
+      <div>
+        <div class="row"><span>Listed at</span><b>$2,395</b></div>
+        <div class="row"><span>Asking now</span><b>$2,265</b></div>
+        <div class="row"><span>Days on market</span><b>39, still active</b></div>
+        <div class="row"><span>Includes</span><b>Grounds care, trash</b></div>
+      </div>
+    </div>
+  </div>
+  <p>This is as close to a twin as the market gives us — same community, same square footage, same one-car garage — and it is an end unit, which renters generally prefer. It has already come down <b>$130</b> and has still not leased after 39 days.</p>
+  <p>The second is <b>2680 Sweet Magnolia Place</b>, a few doors from you. It is slightly smaller at 1,502 square feet, but it has a pond view over the Cross Seminole Trail and a gated front courtyard. It is asking <b>$2,300</b> and has been on the market <b>45 days</b>.</p>
+
+  <div class="pull">
+    <p>If an end unit your size cannot lease at $2,265, and a pond-view home on your own street cannot lease at $2,300, an interior unit priced near either of them will sit alongside them. To lease in 21 days, your home has to come in below both.</p>
+  </div>
+</section>
+
+<section>
+  <p class="snum">Section Three</p>
+  <h2>What leased, and how we adjusted it</h2>
+  <p>The only townhomes that leased in this area this year are in Stratford Green, and both have two-car garages. We adjusted each to your home:</p>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>Adjustment</th><th class="num">5427 Leighton Ln</th><th class="num">8547 Bertram Ln</th></tr></thead>
+    <tbody>
+      <tr><td>Leased rent</td><td class="num">$2,395</td><td class="num">$2,490</td></tr>
+      <tr><td>Size difference</td><td class="num">−$20 <span style="color:var(--muted)">(40 sf larger)</span></td><td class="num">−$60 <span style="color:var(--muted)">(117 sf larger)</span></td></tr>
+      <tr><td>Two-car vs. one-car garage</td><td class="num">−$100</td><td class="num">−$100</td></tr>
+      <tr class="hi"><td>Indication for your home</td><td class="num">$2,275</td><td class="num">$2,330</td></tr>
+      <tr><td>Days to lease</td><td class="num">24</td><td class="num"><span class="pill slow">89</span></td></tr>
+      <tr><td>Leased</td><td class="num">June 23</td><td class="num">June 17</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Both leased in June, the busiest part of the rental year, and both needed a price cut to get there — Leighton came down $100, and Bertram came down $160 and still took 89 days. The June results point to roughly <b>$2,275 to $2,330</b> for your home in peak season.</p>
+  <p>It is now late September, and the two Clayton Crossing homes asking in that range are not moving. That is the gap between what the market paid in June and what it is paying now.</p>
+
+  <details>
+    <summary>See all five comparables</summary>
+    <div class="dbody">
+      <div class="tscroll">
+      <table>
+        <thead><tr><th>Property</th><th>Community</th><th class="num">Sq ft</th><th class="num">Garage</th><th>Notes</th><th class="num">Listed at</th><th class="num">Now / leased</th><th class="num">Days</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr class="gold"><td>5260 Hidden Cypress Ln</td><td>Clayton Crossing</td><td class="num">1,558</td><td class="num">1</td><td>End unit, quartz</td><td class="num">$2,395</td><td class="num">$2,265</td><td class="num">39</td><td>Active</td></tr>
+          <tr><td>2680 Sweet Magnolia Pl</td><td>Clayton Crossing</td><td class="num">1,502</td><td class="num">1</td><td>Pond view, courtyard</td><td class="num">$2,300</td><td class="num">$2,300</td><td class="num">45</td><td>Active</td></tr>
+          <tr><td>5427 Leighton Ln</td><td>Stratford Green</td><td class="num">1,598</td><td class="num">2</td><td>—</td><td class="num">$2,495</td><td class="num">$2,395</td><td class="num">24</td><td>Leased</td></tr>
+          <tr><td>8547 Bertram Ln</td><td>Stratford Green</td><td class="num">1,675</td><td class="num">2</td><td>Fresh paint</td><td class="num">$2,650</td><td class="num">$2,490</td><td class="num"><span class="pill slow">89</span></td><td>Leased</td></tr>
+          <tr><td>5312 Tattinger Ln</td><td>Stratford Green</td><td class="num">1,860</td><td class="num">2</td><td>Pond view</td><td class="num">$3,000</td><td class="num">$2,700</td><td class="num">37</td><td>Active</td></tr>
+        </tbody>
+        <caption>Stellar MLS, September 22, 2026. All unfurnished 3-bedroom, 2.5-bath townhomes. Four of five have already reduced their price.</caption>
+      </table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section>
+  <p class="snum">Section Four</p>
+  <h2>Why $2,195</h2>
+  <div class="chart">
+    <h3>Where your home would sit in Clayton Crossing</h3>
+    <p class="cap">All three are 1-car townhomes in the same gated community</p>
+    <div class="bar"><span>2680 Sweet Magnolia · pond view</span><span class="track"><span class="fill r" style="width:100%">$2,300</span></span></div>
+    <div class="bar"><span>5260 Hidden Cypress · end unit</span><span class="track"><span class="fill r" style="width:98%">$2,265</span></span></div>
+    <div class="bar"><span><b>Your home · interior unit</b></span><span class="track"><span class="fill t" style="width:95%">$2,195</span></span></div>
+    <p class="src">An interior unit without a view should sit below an end unit and a pond-view home. At $2,195 it does, by a margin a renter will notice.</p>
+  </div>
+  <div class="box">
+    <h3>It clears the $2,200 search threshold</h3>
+    <p>Renters browse in price brackets, and $2,200 is a common ceiling. Both Clayton Crossing competitors are priced above it. At $2,195 your home appears in searches neither of them reaches — and is the least expensive way into this gated community.</p>
+  </div>
+  <div class="box">
+    <h3>It reflects the differences honestly</h3>
+    <p>Your home is the same size as the end unit but doesn't have its extra windows and privacy, and it doesn't have the pond view down the street. Pricing it $70 below the end unit and $105 below the pond-view home is a fair reflection of that — and fair pricing is what makes a renter decide quickly.</p>
+  </div>
+  <div class="box">
+    <h3>It reaches more renters</h3>
+    <p>The pond-view home and the largest Stratford Green listing both advertise no pets. Because we consider pets under our management, your home is open to renters those listings exclude.</p>
+  </div>
+  <div class="box">
+    <h3>It pays for itself quickly</h3>
+    <p>Launching at $2,195 rather than the $2,275 June result costs $80 a month, or <b>$960 across a 12-month lease</b>. Every vacant day costs about $73. The lower price pays for itself if the home leases just <b>13 days sooner</b> — and its two neighbors are already past 39 and 45 days.</p>
+  </div>
+</section>
+
+<section>
+  <p class="snum">Section Five</p>
+  <h2>How we'll manage it</h2>
+  <p>We will not promise a specific number of days — nobody can, and an invented number would only mislead you. What we will do is measure closely: inquiries, showings booked, and showings actually attended over the first five days.</p>
+  <p>If that activity is not strong enough for us to <b>choose</b> a well-qualified resident rather than accept whoever applies, we move to $2,125. If the market says that is still not enough, we go to $2,075 and keep reading it. $2,075 is a step, not a bottom — our commitment is to keep reacting to the market rather than defending a number chosen in advance.</p>
+  <div class="pull">
+    <p>We will also watch the two Clayton Crossing listings closely. If either one reduces again, we will tell you the same day, because staying below them is what keeps your home the first one renters call.</p>
+  </div>
+</section>
+
+<section>
+  <p class="snum">Section Six</p>
+  <h2>Summary</h2>
+  <ul>
+    <li>Two Clayton Crossing townhomes are for rent now. The same-size end unit has dropped to <b>$2,265</b> and has sat 39 days; the pond-view home on your street is at <b>$2,300</b> after 45 days.</li>
+    <li>The two Stratford Green leases, adjusted for their two-car garages and size, point to <b>$2,275 to $2,330</b> — but both were June leases, both needed price cuts, and one took 89 days.</li>
+    <li>Four of the five comparables have already reduced their price.</li>
+    <li>At <b>$2,195</b> your home is the least expensive way into Clayton Crossing, under the $2,200 search bracket, and priced fairly below the end unit and the pond-view home.</li>
+    <li>The lower launch costs about $960 over a year and pays for itself if the home leases 13 days sooner.</li>
+    <li>Launch at $2,195. Read the first five days. Move to $2,125, then $2,075, and keep pivoting with the market.</li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="sig">Curating Orlando's Finest Rental Portfolio</div>
+    <p><b>Verandah Properties, LLC</b><br>Pamela Syvertson, Owner &amp; Broker · License CQ1048619 · <a href="tel:4078550331">407-855-0331</a></p>
+    <p style="font-size:.84rem;color:#8C877F;max-width:74ch">Market data sourced from Stellar MLS as of September 22, 2026, and is deemed reliable but not guaranteed. Comparable analysis reflects unfurnished 3-bedroom townhome rentals in Clayton Crossing and Stratford Green, Oviedo 32765, and is an opinion of value, not an appraisal.</p>
+  </div>
+</footer>
+
+</body>
+</html>
